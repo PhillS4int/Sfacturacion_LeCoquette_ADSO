@@ -1,0 +1,62 @@
+SUBIR BACKEND
+
+cd "C:lecoquette_sistema/backend"
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv\Scripts\Activate.ps1
+
+Ingresar el siguiente comando en la terminal de VS Code del back-end:
+
+py -m uvicorn app.main:app --reload
+
+navegador
+
+http://127.0.0.1:8000/docs
+
+SUBIR FRONTEND
+
+cd "C:lecoquette_sistema\frontend\lecoquette"
+
+Ingresar el siguiente comando en otra terminal de VS Code del front-end:
+
+npm.cmd run dev
+
+navegador
+
+http://localhost:5173
+
+
+entrar carpeta correcta frontend
+
+cd "C:lecoquette_sistema\frontend\lecoquette"
+
+subirlo
+
+npm.cmd run dev
+
+
+USUARIOS Y PASSWORDS
+
+************ Admin ****************
+
+email: admin@lecoquette.com
+password: admin123
+role: administrador
+role_id: 1
+
+
+*********** Empleado ************ 
+
+email: empleado@lecoquette.com
+password: empleado123
+role: empleado
+role_id: 2
+
+Nota: Ambos terminales (front-end y back-end) deben estar corriendo|ejecutándose simultáneamente.
+
+//*************************** BASE DE DATOS EN MYSQL *********************************//
+
+1. Crear el "schema" en Workbench con el nombre "lecoquette_facturacion" (sin comillas)
+2. Ir a File > "Open SQL Script" y buscar el archivo lecoquette_facturacion.sql
+3. Ejecutar el comando: "USE `lecoquette_facturacion`;" para asociar el archivo 'lecoquette_facturacion.sql'
+al schema de la base de datos.
